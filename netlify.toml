@@ -1,17 +1,9 @@
-[build]
-  command = "npm install && npm run build"
-  publish = "dist/admin-dashboard"
+command = "ng build --configuration production"
 
-[build.environment]
-  NODE_VERSION = "18"
+publish = "dist/admin-dashboard"
+
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+from = "/*"
+to = "/index.html"
+status = 200
