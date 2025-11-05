@@ -3,11 +3,11 @@
 # 1. Build Settings
 [build]
   # This command tells Netlify to build your app for production
-  command = "ng build --configuration production"
+  command = "npm run build && echo 'Build completed' && ls -la dist/"
 
   # This is the folder that Angular builds your site into.
   # IMPORTANT: You MUST verify this path.
-  publish = "dist/admin-dashboard"
+  publish = "dist"
 
 # 2. Redirects for Angular Routing (Fixes 404 Errors)
 [[redirects]]
