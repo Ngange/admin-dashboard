@@ -1,15 +1,11 @@
-# Netlify configuration file
-
-# 1. Build Settings
 [build]
-  # This command tells Netlify to build your app for production
-  command = "ng build --configuration production"
+  command = "npm run build"
+  publish = "dist/admin-dashboard"
 
-  # This is the folder that Angular builds your site into.
-  # IMPORTANT: You MUST verify this path.
-  publish = "/dist/admin-dashboard"
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
 
-# 2. Redirects for Angular Routing (Fixes 404 Errors)
 [[redirects]]
   from = "/*"
   to = "/index.html"
